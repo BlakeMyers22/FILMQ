@@ -199,6 +199,16 @@ button:hover::after {
     font-weight: bold;
     margin-top: 10px;
     text-align: center;
+    word-wrap: break-word; /* Ensure the address breaks into a new line */
+    overflow-wrap: break-word; /* Additional rule to ensure long words (wallet addresses) break */
+    width: 100%; /* Make sure it spans the full width */
+    padding: 10px; /* Add some padding for better readability */
+    background-color: #f9f9f9; /* Light background for better contrast */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    word-break: break-all; /* Break long words (like wallet addresses) */
+    box-sizing: border-box;
 }
 
 /* Media Preview (Images/Videos) */
