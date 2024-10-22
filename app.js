@@ -4,156 +4,156 @@ let contract;
 let accounts;
 const contractAddress = "0x45F149cc041c5CFa7b97CDe1EaB3E4794193f673"; // Replace with actual contract address
 const contractABI = [
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "id",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "string",
-				"name": "filmDetails",
-				"type": "string"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "budget",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "string[]",
-				"name": "mediaUrls",
-				"type": "string[]"
-			}
-		],
-		"name": "FilmTokenized",
-		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_filmDetails",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_budget",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string[]",
-				"name": "_mediaUrls",
-				"type": "string[]"
-			}
-		],
-		"name": "tokenizeFilm",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "filmCount",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "films",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "id",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "filmDetails",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "budget",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_filmId",
-				"type": "uint256"
-			}
-		],
-		"name": "getFilm",
-		"outputs": [
-			{
-				"components": [
-					{
-						"internalType": "uint256",
-						"name": "id",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "filmDetails",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "budget",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string[]",
-						"name": "mediaUrls",
-						"type": "string[]"
-					}
-				],
-				"internalType": "struct Filmdaq.Film",
-				"name": "",
-				"type": "tuple"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "getFilmCount",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	}
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "filmDetails",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "budget",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string[]",
+                "name": "mediaUrls",
+                "type": "string[]"
+            }
+        ],
+        "name": "FilmTokenized",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_filmDetails",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_budget",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string[]",
+                "name": "_mediaUrls",
+                "type": "string[]"
+            }
+        ],
+        "name": "tokenizeFilm",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "filmCount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "films",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "filmDetails",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "budget",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_filmId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getFilm",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "id",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "filmDetails",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "budget",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string[]",
+                        "name": "mediaUrls",
+                        "type": "string[]"
+                    }
+                ],
+                "internalType": "struct Filmdaq.Film",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getFilmCount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
 ];
 
 // Pinata API keys for IPFS
