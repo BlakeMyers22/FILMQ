@@ -40,10 +40,23 @@ header {
     padding: 0 20px;
 }
 
+/* Logo Container with White Background */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-background {
+    background-color: #ffffff; /* White background */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners, if needed */
+    display: inline-block;
+}
+
 .logo {
     width: 100px;
     height: auto;
-    margin-right: 20px;
 }
 
 .header-text h1 {
