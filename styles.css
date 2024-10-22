@@ -21,14 +21,14 @@ body {
 
 /* Header Styling */
 header {
-    background-color: var(--primary-color); /* Dark Blue */
+    background-color: #000000; /* Black background */
     padding: 20px 0;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #fff;
+    color: #fff; /* White text to contrast against the black background */
 }
 
 .header-content {
@@ -70,7 +70,7 @@ header {
 .token-symbol {
     font-size: 1.2em;
     font-weight: 500;
-    color: #ecf0f1; /* Lighter color for the token symbol */
+    color: #ecf0f1; /* Slightly lighter color for the token symbol */
 }
 
 .header-text p {
