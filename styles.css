@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap');
 
@@ -10,7 +8,6 @@
     --accent-color: #e74c3c; /* Red */
     --background-color: #ecf0f1; /* Light Gray */
     --text-color: #2c3e50; /* Dark Gray */
-    --highlight-color: #f1c40f; /* Gold */
 }
 
 /* Global Styles */
@@ -22,42 +19,50 @@ body {
     color: var(--text-color);
 }
 
-/* Header and Logo */
+/* Header Styling */
 header {
     background-color: var(--primary-color); /* Dark Blue */
     padding: 20px 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
 }
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
 }
 
-header img {
-    width: 80px;
+.logo {
+    width: 100px;
+    height: auto;
     margin-right: 20px;
 }
 
-header h1 {
-    margin: 0;
+.header-text h1 {
     font-size: 2.5em;
+    margin: 0;
     color: #fff; /* Set text color to white */
     font-family: 'Montserrat', sans-serif;
 }
 
-header .token-symbol {
-    font-size: 0.6em;
-    font-weight: normal;
-    color: #ecf0f1; /* Slightly lighter color for "(FILMQ)" */
+.token-symbol {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #ecf0f1; /* Lighter color for the token symbol */
 }
 
-header p {
+.header-text p {
     font-size: 1.2em;
-    color: var(--highlight-color); /* Gold for the tagline */
-    margin-top: 5px;
+    color: #ecf0f1; /* Lighter text color */
+    margin: 10px 0 0;
 }
 
 /* Container Styles */
@@ -207,6 +212,11 @@ footer {
     margin-top: 50px;
 }
 
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-content {
@@ -214,12 +224,12 @@ footer {
         text-align: center;
     }
 
-    header img {
+    .logo {
         margin-right: 0;
         margin-bottom: 10px;
     }
 
-    header h1 {
+    .header-text h1 {
         font-size: 2em;
     }
 
