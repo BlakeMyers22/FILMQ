@@ -5,6 +5,7 @@
 :root {
     --primary-color: #000000; /* Black */
     --secondary-color: #000000; /* Black for buttons and titles */
+    --blue-color: #3498db; /* Blue for Connect Wallet button */
     --accent-color: #e74c3c; /* Red (if needed, but not used) */
     --background-color: #ffffff; /* White background */
     --text-color: #000000; /* Black for text */
@@ -38,6 +39,8 @@ header {
     max-width: 1200px;
     width: 100%;
     padding: 0 20px;
+    margin: 0; /* Remove margin */
+    flex-wrap: nowrap; /* Ensure flexbox doesn't wrap elements */
 }
 
 /* Logo Container with White Background */
@@ -46,28 +49,22 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #ffffff; /* White background behind the logo */
-    padding: 0;
-    margin: 0;
-    width: fit-content;
-    height: fit-content;
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
+    width: fit-content;  /* Fit the logo size exactly */
+    height: fit-content; /* Fit the logo size exactly */
+    box-shadow: none; /* Remove any shadow */
+    border: none; /* No border */
 }
 
-.logo-background {
-    display: inline-block;
-    background-color: transparent;
-    padding: 0;
-    margin: 0;
-    width: fit-content;
-    height: fit-content;
-}
-
+/* Logo Styling */
 .logo {
-    width: 100px;
+    width: 100px; /* Adjust the logo size */
     height: auto;
     display: block;
-    margin: 0;
-    padding: 0;
-    object-fit: contain;
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    object-fit: contain; /* Keep the logo contained */
 }
 
 .header-text h1 {
@@ -147,7 +144,7 @@ label {
     color: var(--text-color); /* Black label text */
 }
 
-/* Buttons */
+/* General Buttons */
 button {
     background-color: var(--secondary-color); /* Black buttons */
     color: #fff; /* White text for buttons */
@@ -186,6 +183,15 @@ button:hover {
 
 button:hover::after {
     width: 200%;
+}
+
+/* Specific Blue "Connect Wallet" Button */
+#connectWalletButton {
+    background-color: var(--blue-color); /* Blue button for Connect Wallet */
+}
+
+#connectWalletButton:hover {
+    background-color: #2980b9; /* Darker blue on hover */
 }
 
 /* Wallet Address */
