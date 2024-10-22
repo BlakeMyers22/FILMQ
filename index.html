@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmdaq - Decentralizing the Film Industry</title>
+    <!-- Include MetaMask's Web3.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <img src="logo.svg" alt="Filmdaq Logo">
+            <h1>Filmdaq <span class="token-symbol">(FILMQ)</span></h1>
+            <p>Revolutionizing Film Financing with Blockchain</p>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <!-- Connect Wallet Section -->
+        <div id="walletSection" class="card">
+            <button id="connectWalletButton"><i class="fas fa-wallet"></i> Connect Wallet</button>
+            <p id="walletAddress"></p>
+        </div>
+
+        <!-- Introduction Section -->
+        <section id="introSection" class="card">
+            <h2>Welcome to Filmdaq</h2>
+            <p>Filmdaq is a decentralized platform where you can tokenize films, production assets, and film-related services using FILMQ tokens. Connect your wallet to get started!</p>
+        </section>
+
+        <!-- Browse Films Section -->
+        <section id="browseFilmsSection" class="card">
+            <h2>Browse Tokenized Films</h2>
+            <div id="filmList">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Tokenize a Film Section -->
+        <section id="tokenizeFilmSection" class="card" style="display: none;">
+            <h2>Tokenize Your Film</h2>
+            <form>
+                <div class="form-group">
+                    <label for="filmDetailsInput">Film Details (e.g., Title, Synopsis):</label>
+                    <input type="text" id="filmDetailsInput" placeholder="Enter film details">
+                </div>
+                <div class="form-group">
+                    <label for="budgetInput">Budget (in FILMQ):</label>
+                    <input type="number" id="budgetInput" placeholder="Enter budget in FILMQ">
+                </div>
+                <div class="form-group">
+                    <label for="mediaInput">Upload Film Assets (Images, Trailers):</label>
+                    <input type="file" id="mediaInput" accept="image/*,video/*" multiple>
+                </div>
+                <!-- Preview Container for Images and Videos -->
+                <div id="mediaPreview" style="margin-top: 20px;"></div>
+                <button type="button" id="tokenizeFilmButton"><i class="fas fa-plus-circle"></i> Tokenize Film</button>
+            </form>
+        </section>
+
+        <!-- FILMQ Trading Section -->
+        <section id="tradingSection" class="card">
+            <h2>FILMQ Token Trading</h2>
+            <p>Buy, sell, or swap FILMQ tokens in our secondary market.</p>
+            <div id="marketplace">
+                <!-- Dynamic token marketplace will be displayed here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2024 Filmdaq. All rights reserved.
+    </footer>
+
+    <!-- Include your JavaScript file -->
+    <script src="app.js"></script>
+</body>
+</html>
