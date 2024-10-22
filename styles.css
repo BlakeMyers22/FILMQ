@@ -3,11 +3,11 @@
 
 /* Root Variables for Colors */
 :root {
-    --primary-color: #2c3e50; /* Dark Blue */
+    --primary-color: #000000; /* Black for header and primary sections */
     --secondary-color: #3498db; /* Blue */
     --accent-color: #e74c3c; /* Red */
     --background-color: #ecf0f1; /* Light Gray */
-    --text-color: #2c3e50; /* Dark Gray */
+    --text-color: #ecf0f1; /* White for contrast on dark backgrounds */
 }
 
 /* Global Styles */
@@ -16,19 +16,19 @@ body {
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
-    color: var(--text-color);
+    color: var(--text-color); /* Updated to white for contrast */
 }
 
 /* Header Styling */
 header {
-    background-color: #000000; /* Black background */
+    background-color: var(--primary-color); /* Black background */
     padding: 20px 0;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #fff; /* White text to contrast against the black background */
+    color: #fff; /* White text for contrast */
 }
 
 .header-content {
@@ -50,32 +50,32 @@ header {
 .logo-background {
     background-color: #ffffff; /* White background */
     display: inline-block;
-    width: fit-content;  /* Shrink-wrap to the size of the content */
-    height: fit-content; /* Shrink-wrap to the height of the logo */
+    width: fit-content;
+    height: fit-content;
 }
 
 .logo {
-    width: 100px; /* Adjust the size of the logo */
+    width: 100px;
     height: auto;
-    display: block; /* Ensures no extra padding or space around the logo */
+    display: block;
 }
 
 .header-text h1 {
     font-size: 2.5em;
     margin: 0;
-    color: #fff; /* Set text color to white */
+    color: #fff; /* Keep text white */
     font-family: 'Montserrat', sans-serif;
 }
 
 .token-symbol {
     font-size: 1.2em;
     font-weight: 500;
-    color: #ecf0f1; /* Slightly lighter color for the token symbol */
+    color: #ecf0f1; /* Lighter color for token symbol */
 }
 
 .header-text p {
     font-size: 1.2em;
-    color: #ecf0f1; /* Lighter text color */
+    color: #ecf0f1; /* Lighter color for subtext */
     margin: 10px 0 0;
 }
 
@@ -103,7 +103,7 @@ header {
 /* Headings */
 h2 {
     font-family: 'Montserrat', sans-serif;
-    color: var(--primary-color);
+    color: var(--secondary-color); /* Keep the blue as the highlight */
     font-size: 1.8em;
     margin-top: 0;
     margin-bottom: 20px;
@@ -124,7 +124,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-    border-color: var(--secondary-color);
+    border-color: var(--secondary-color); /* Blue for focused input */
     outline: none;
 }
 
@@ -137,7 +137,7 @@ label {
 
 /* Buttons */
 button {
-    background-color: var(--secondary-color); /* Blue */
+    background-color: var(--secondary-color); /* Blue for buttons */
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -169,7 +169,7 @@ button::after {
 }
 
 button:hover {
-    background-color: var(--primary-color); /* Dark Blue */
+    background-color: var(--primary-color); /* Black for hover effect */
 }
 
 button:hover::after {
@@ -219,7 +219,7 @@ button:hover::after {
 
 /* Footer */
 footer {
-    background-color: var(--primary-color); /* Dark Blue */
+    background-color: var(--primary-color); /* Black footer */
     color: #fff;
     padding: 15px 0;
     text-align: center;
